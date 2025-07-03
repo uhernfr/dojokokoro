@@ -1,45 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dojo Kokoro - Aikido</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <style>
-      html {
-        scroll-behavior: smooth;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dojo Kokoro - Aikido</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+      list-style: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      body {
+        padding-top: 60px;
+        /* Espaço para o navbar fixo */
       }
-    </style>
-  </head>
+
+      .menu {
+        border-left: 5px solid #fff;
+      }
+
+    }
+  </style>
+</head>
+
 <body class="bg-white text-gray-800">
 
   <!-- Navbar -->
   <nav class="bg-black text-white p-4 flex justify-between items-center fixed top-0 left-0 w-full z-50 shadow-md">
-    <div class="text-2xl font-bold">Dojo Kokoro</div>
-    <div class="space-x-6">
-      <a href="#home" class="hover:text-yellow-400">Home</a>
-      <a href="#sobre" class="hover:text-yellow-400">Sobre</a>
-      <a href="#unidades" class="hover:text-yellow-400">Unidades</a>
-      <a href="#professores" class="hover:text-yellow-400">Professores</a>
-      <a href="#horarios" class="hover:text-yellow-400">Horários</a>
-      <a href="#aluno" class="hover:text-yellow-400">Área do Aluno</a>
-      <a href="#contato" class="hover:text-yellow-400">Contato</a>
+    <div class="flex items-center space-x-4">
+      <img src="images/logo-kokoro-lateral-branco.png" alt="Dojo Kokoro" class="h-10">
+      <!-- <div class="text-2xl font-bold">Dojo Kokoro</div> -->
     </div>
+    <div class="md:flex md:space-x-6 hidden" id="menu">
+      <ul class="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0"></ul>
+      <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
+      <li><a href="#sobre" class="hover:text-yellow-400">Sobre</a></li>
+      <li><a href="#unidades" class="hover:text-yellow-400">Unidades</a></li>
+      <li><a href="#professores" class="hover:text-yellow-400">Professores</a></li>
+      <li><a href="#horarios" class="hover:text-yellow-400">Horários</a></li>
+      <li><a href="#aluno" class="hover:text-yellow-400">Área do Aluno</a></li>
+      <li><a href="#contato" class="hover:text-yellow-400">Contato</a></li>
+      </ul>
+    </div>
+    <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
   </nav>
+
 
   <!-- Home -->
   <section id="home" class="relative overflow-hidden">
-    <img src="dojo-banner.jpg" 
-         alt="Banner do Dojo Kokoro"
-         class="w-full h-full object-cover min-h-[60vh] md:min-h-[75vh] lg:min-h-screen absolute inset-0 z-0" />
-    <div class="relative z-10 flex flex-col justify-center items-center text-center bg-black bg-opacity-50 min-h-[60vh] md:min-h-[75vh] lg:min-h-screen px-6">
+    <img src="images/dojo-banner.jpg" alt="Banner do Dojo Kokoro"
+      class="w-full h-full object-cover min-h-[60vh] md:min-h-[75vh] lg:min-h-screen absolute inset-0 z-0" />
+    <div
+      class="relative z-10 flex flex-col justify-center items-center text-center bg-black bg-opacity-50 min-h-[60vh] md:min-h-[75vh] lg:min-h-screen px-6">
       <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight">
         A harmonia no movimento, a força no coração.
       </h1>
       <p class="mt-4 text-lg md:text-xl text-white max-w-2xl">
         Venha viver o Aikido. A prática que transforma corpo, mente e espírito.
       </p>
-      <a href="#contato" class="mt-6 px-6 py-3 bg-yellow-400 text-black rounded-full hover:bg-yellow-500 transition-colors duration-300">
+      <a href="#contato"
+        class="mt-6 px-6 py-3 bg-yellow-400 text-black rounded-full hover:bg-yellow-500 transition-colors duration-300">
         Agende sua aula experimental
       </a>
     </div>
@@ -47,22 +75,74 @@
 
   <!-- Sobre -->
   <section id="sobre" class="p-10 bg-gray-100">
-    <h2 class="text-3xl font-bold mb-4">Sobre o Dojo Kokoro</h2>
-    <p class="mb-4">O Dojo Kokoro é um espaço dedicado ao desenvolvimento pessoal e à prática do Aikido. Nossa missão é promover equilíbrio, disciplina e autoconhecimento através desta arte marcial japonesa.</p>
-    <p>O Aikido é uma filosofia de vida e uma prática marcial que busca a harmonia, o respeito e a superação.</p>
+    <h2 class="text-3xl font-bold mb-6">Sobre o Dojo Kokoro</h2>
+    <div class="max-w-4xl mx-auto space-y-6">
+      <p class="text-lg">
+        O Dojo Kokoro é um espaço dedicado ao desenvolvimento pessoal e à prática do Aikido. Nossa missão é promover
+        equilíbrio, disciplina e autoconhecimento através desta arte marcial japonesa.
+      </p>
+      <p class="text-lg">
+        O Aikido é uma filosofia de vida e uma prática marcial que busca a harmonia, o respeito e a superação.
+      </p>
+      <p class="text-lg">
+        Escola de Aikido Kokoro Dojo Sorocaba foi inaugurada em março de 1995. Começamos os treinos em um Dojo de Judô.
+        Autorizado por seu professor, o Shihan Wagner Bull 7º Dan, Shidoin Constantino Delis, 6º Dan, começou os treinos
+        aqui em Sorocaba, hoje sob as orientações do Shidon Eduardo Pelegrini 5º Dan.
+      </p>
+      <div class="flex justify-center">
+        <img src="images/sensei-eduardo.png" alt="Sensei Eduardo Pelegrini" class="rounded-lg max-w-full h-auto">
+      </div>
+      <p class="text-lg">
+        Em novembro de 2001, inauguramos nossa sede própria, no bairro do Campolim com ótimas instalações. São 200m² de
+        tatame para treinos de Aikido, 100m² de salão de Pilates, recepção, amplos vestiários, sala de leitura, cantina,
+        720m² jardim japonês com lago e carpas.
+      </p>
+      <p class="text-lg">
+        As aulas de Aikido acontecem de segunda a sábado, no horário da tarde e à noite (consulte horários atualizados).
+      </p>
+      <p class="text-lg">
+        O Aikido é uma arte marcial sem competições. Não há ninguém a ser derrotado; apenas nossos medos e ansiedades. O
+        autoconhecimento que a prática da arte propicia é uma poderosa ferramenta para trabalharmos com tais medos e
+        ansiedades.
+      </p>
+      <p class="text-lg">
+        Além de propiciar saúde física e ser excelente defesa pessoal. É assim que nós do Kokoro Dojo praticamos o
+        Aikido: buscando o crescimento mental, espiritual e físico.
+      </p>
+    </div>
   </section>
 
   <!-- Unidades -->
   <section id="unidades" class="p-10">
     <h2 class="text-3xl font-bold mb-4">Nossas Unidades</h2>
-    <div class="space-y-4">
+    <div class="max-w-4xl mx-auto space-y-6">
       <div>
         <h3 class="text-xl font-semibold">Sorocaba</h3>
-        <p>Rua Exemplo, 123 - Centro</p>
+        <p>Rua Esmeraldo Tarquínio, 53 – Parque Campolim – Sorocaba – SP.</p>
+        <p>Tel: (15) 99135-7244 / (15) 99670-6625</p>
+        <p>Email: pelegriniaikido@gmail.com</p>
+        <div class="mt-4">
+          <a href="https://www.instagram.com/aikidokokoro" target="_blank" class="inline-block mr-4">
+            <img src="images/instagram-icon.png" alt="Instagram" class="h-6 w-6">
+          </a>
+          <a href="https://www.facebook.com/groups/224129667610934" target="_blank" class="inline-block">
+            <img src="images/facebook-icon.png" alt="Facebook" class="h-6 w-6">
+          </a>
+        </div>
       </div>
       <div>
-        <h3 class="text-xl font-semibold">São Paulo</h3>
-        <p>Av. Exemplo, 456 - Moema</p>
+        <h3 class="text-xl font-semibold">Indaiatuba</h3>
+        <p>RRua Amazonas, 262, Indaiatuba, SP.</p>
+        <p>Tel: (19) 99200 162</p>
+        <p>Email: gandolfiw@gmail.com</p>
+        <div class="mt-4">
+          <a href="https://www.instagram.com/dojoaikidoindaiatuba" target="_blank" class="inline-block mr-4">
+            <img src="images/instagram-icon.png" alt="Instagram" class="h-6 w-6">
+          </a>
+          <a href="https://www.facebook.com/aikidoindaiatuba.dojokokoro" target="_blank" class="inline-block">
+            <img src="images/facebook-icon.png" alt="Facebook" class="h-6 w-6">
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -70,21 +150,23 @@
   <!-- Professores -->
   <section id="professores" class="p-10 bg-gray-100">
     <h2 class="text-3xl font-bold mb-4">Nossos Professores</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="max-w-4xl mx-auto space-y-6">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6  mx-auto ">
       <div class="bg-white p-6 rounded shadow">
-        <h3 class="text-xl font-semibold">Sensei João Silva - 4º Dan</h3>
+        <h3 class="text-xl font-semibold">Sensei Eduardo Pelegrini</h3>
+        <h3 class="text-xl font-semibold">5º Dan</h3>
         <p>Mais de 20 anos dedicados ao Aikido, transmitindo disciplina e valores.</p>
       </div>
-      <div class="bg-white p-6 rounded shadow">
-        <h3 class="text-xl font-semibold">Sensei Maria Tanaka - 3º Dan</h3>
-        <p>Especialista em Aikido para crianças e jovens, desenvolvendo confiança e foco.</p>
-      </div>
+
+    </div>
     </div>
   </section>
 
   <!-- Horários -->
   <section id="horarios" class="p-10">
     <h2 class="text-3xl font-bold mb-4">Horários</h2>
+    <div class="max-w-4xl mx-auto space-y-6">
     <table class="table-auto w-full text-left">
       <thead>
         <tr>
@@ -95,43 +177,81 @@
       </thead>
       <tbody>
         <tr class="bg-gray-50">
-          <td class="px-4 py-2">Segunda e Quarta</td>
-          <td class="px-4 py-2">19h às 20h30</td>
+          <td class="px-4 py-2">Segunda</td>
+          <td class="px-4 py-2">19:30 às 21:00</td>
           <td class="px-4 py-2">Adulto</td>
         </tr>
         <tr>
           <td class="px-4 py-2">Terça e Quinta</td>
-          <td class="px-4 py-2">18h às 19h</td>
+          <td class="px-4 py-2">07:30 às 09:00</td>
+          <td class="px-4 py-2">Adulto</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2"></td>
+          <td class="px-4 py-2">18:15 às 19:00</td>
           <td class="px-4 py-2">Infantil</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2"></td>
+          <td class="px-4 py-2">19:30 às 21:00</td>
+          <td class="px-4 py-2">Adulto</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="px-4 py-2">Sábados</td>
+          <td class="px-4 py-2">16:00 às 17:30</td>
+          <td class="px-4 py-2">Livre</td>
         </tr>
       </tbody>
     </table>
+  </div>
   </section>
 
   <!-- Área do Aluno -->
   <section id="aluno" class="p-10 bg-gray-100">
     <h2 class="text-3xl font-bold mb-4">Área do Aluno</h2>
-    <p>Acesse materiais exclusivos, vídeos, calendário de eventos e avisos importantes.</p>
-    <a href="#" class="mt-4 inline-block px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800">Entrar</a>
+    <div class="max-w-4xl mx-auto space-y-6">
+      <p>Acesse materiais exclusivos, vídeos, calendário de eventos e avisos importantes.</p>
+      <a href="#" class="mt-4 inline-block px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800">Entrar</a>
+    </div>
   </section>
 
   <!-- Contato -->
   <section id="contato" class="p-10">
     <h2 class="text-3xl font-bold mb-4">Contato</h2>
-    <p class="mb-4">Fale conosco para mais informações ou agendar uma aula experimental.</p>
-    <form class="space-y-4 max-w-md">
-      <input type="text" placeholder="Nome" class="w-full border p-2 rounded">
-      <input type="email" placeholder="Email" class="w-full border p-2 rounded">
-      <input type="tel" placeholder="Telefone" class="w-full border p-2 rounded">
-      <textarea placeholder="Mensagem" class="w-full border p-2 rounded"></textarea>
-      <button type="submit" class="px-6 py-3 bg-yellow-400 text-black rounded-full hover:bg-yellow-500">Enviar</button>
-    </form>
+    <div class="max-w-4xl mx-auto space-y-6">
+      <p class="mb-4">Fale conosco para mais informações ou agendar uma aula experimental.</p>
+      <p>Kokoro Dojo está localizado na Rua Esmeraldo Tarquínio, 53 – Parque Campolim – Sorocaba – SP.</p>
+
+      <p>Telefone: (15) 99135-7244 / (15) 99670-6625</p>
+      <p>Email: <a href="mailto:pelegriniaikido@gmail.com">pelegriniaikido@gmail.com</a></p>
+      <div>
+        <a href="https://wa.me/5515991357244?text=Agende%20sua%20aula%20experimental" target="_blank"
+          class="mt-6 px-6 py-3 bg-yellow-400 text-black rounded-full hover:bg-yellow-500 transition-colors duration-300">
+          Agende sua aula experimental
+        </a>
+      </div>
+      <div class="mt-6">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.891134476451!2d-47.47220828438544!3d-23.58408898467059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c58a9d6b2b7f4b%3A0x8b2b1f2e6e5b8c9b!2sRua%20Esmeraldo%20Tarqu%C3%ADnio%2C%2053%20-%20Parque%20Campolim%2C%20Sorocaba%20-%20SP%2C%2018039-330!5e0!3m2!1spt-BR!2sbr!4v1697040000000!5m2!1spt-BR!2sbr"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+     
+    </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-black text-white text-center p-4">
     &copy; 2025 Dojo Kokoro. Todos os direitos reservados.
   </footer>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
 
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 </body>
+
 </html>
