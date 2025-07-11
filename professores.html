@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professores - Dojo Kokoro</title>
+  <meta name="description" content="Conheça os professores do Dojo Kokoro. Instrutores experientes, apaixonados pelo Aikido e comprometidos com o seu desenvolvimento.">
+  <link href="./Dojo Kokoro - Aikido_files/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900 antialiased">
+  <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center">
+          <img src="./Dojo Kokoro - Aikido_files/logo-kokoro-lateral-branco.png" alt="Dojo Kokoro" class="h-10 w-auto filter invert">
+        </div>
+        
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html#inicio" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors">Início</a>
+          <a href="index.html#sobre" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors">Sobre</a>
+          <a href="index.html#beneficios" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors">Benefícios</a>
+          <a href="index.html#unidades" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors">Unidades</a>
+          <a href="index.html#horarios" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors">Horários</a>
+          <a href="professores.html" class="text-yellow-600 font-bold transition-colors">Professores</a>
+          <a href="area-aluno.html" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors">Área do Aluno</a>
+        </div>
+        
+        <a href="https://wa.me/5515996706625?text=Quero%20agendar%20minha%20aula%20experimental%20gratuita" 
+           target="_blank" 
+           class="hidden md:inline-block px-6 py-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-semibold rounded-full hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105">
+          Aula Grátis
+        </a>
+        
+        <button class="md:hidden p-2" id="mobile-menu-toggle">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="py-4 space-y-4 bg-white rounded-lg shadow-lg border border-gray-200">
+          <a href="index.html#inicio" class="block text-gray-700 hover:text-yellow-600 font-medium px-4">Início</a>
+          <a href="index.html#sobre" class="block text-gray-700 hover:text-yellow-600 font-medium px-4">Sobre</a>
+          <a href="index.html#beneficios" class="block text-gray-700 hover:text-yellow-600 font-medium px-4">Benefícios</a>
+          <a href="index.html#unidades" class="block text-gray-700 hover:text-yellow-600 font-medium px-4">Unidades</a>
+          <a href="index.html#horarios" class="block text-gray-700 hover:text-yellow-600 font-medium px-4">Horários</a>
+          <a href="professores.html" class="block text-gray-700 hover:text-yellow-600 font-medium px-4">Professores</a>
+          <a href="area-aluno.html" class="block text-gray-700 hover:text-yellow-600 font-medium px-4">Área do Aluno</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Professores do Dojo Kokoro</h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+          Conheça nossos instrutores, suas graduações e trajetórias no Aikido.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center card-hover cursor-pointer" onclick="showProfessorModal('eduardo')">
+          <img src="./Dojo Kokoro - Aikido_files/sensei-eduardo.png" alt="Sensei Eduardo Pelegrini" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+          <h2 class="text-2xl font-bold mb-2">Sensei Eduardo Pelegrini</h2>
+          <div class="text-yellow-600 font-semibold mb-2">5º Dan</div>
+          <p class="text-gray-600 text-sm mb-2">Diretor técnico do Dojo Kokoro. Mais de 30 anos de experiência, referência em Aikido no interior de SP. Aluno do Shihan Wagner Bull (7º Dan).</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center card-hover cursor-pointer" onclick="showProfessorModal('mauricio')">
+          <img src="./Dojo Kokoro - Aikido_files/instrutores-02.png" alt="Maurício" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+          <h2 class="text-2xl font-bold mb-2">Maurício Camargo</h2>
+          <div class="text-yellow-600 font-semibold mb-2">3º Dan</div>
+          <p class="text-gray-600 text-sm mb-2">Instrutor de adultos. Experiência internacional e abordagem técnica detalhada.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center card-hover cursor-pointer" onclick="showProfessorModal('walter')">
+          <img src="./Dojo Kokoro - Aikido_files/instrutores-02.png" alt="Sensei Walter" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+          <h2 class="text-2xl font-bold mb-2">Sensei Walter</h2>
+          <div class="text-yellow-600 font-semibold mb-2">2º Dan</div>
+          <p class="text-gray-600 text-sm mb-2">Responsável pelas aulas de adultos em Indaiatuba. Experiência e dedicação ao ensino do Aikido.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center card-hover cursor-pointer" onclick="showProfessorModal('rocha')">
+          <img src="./Dojo Kokoro - Aikido_files/instrutores-01.png" alt="Rocha" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+          <h2 class="text-2xl font-bold mb-2">Alexandre Rocha</h2>
+          <div class="text-yellow-600 font-semibold mb-2">1º Dan</div>
+          <p class="text-gray-600 text-sm mb-2">Instrutor de adultos. Didática acolhedora e foco no desenvolvimento técnico dos alunos.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center card-hover cursor-pointer" onclick="showProfessorModal('francisco')">
+          <img src="./Dojo Kokoro - Aikido_files/sensei-eduardo.png" alt="Francisco" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+          <h2 class="text-2xl font-bold mb-2">Francisco Hernando</h2>
+          <div class="text-yellow-600 font-semibold mb-2">1º Dan</div>
+          <p class="text-gray-600 text-sm mb-2">Instrutor de aulas livres. Incentiva a prática colaborativa e o aprofundamento técnico.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center card-hover cursor-pointer" onclick="showProfessorModal('augusto')">
+          <img src="./Dojo Kokoro - Aikido_files/instrutores-01.png" alt="Augusto" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+          <h2 class="text-2xl font-bold mb-2">Augusto</h2>
+          <div class="text-yellow-600 font-semibold mb-2">1º Dan</div>
+          <p class="text-gray-600 text-sm mb-2">Instrutor Kids em Indaiatuba. Foco no desenvolvimento infantil e disciplina.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center card-hover cursor-pointer" onclick="showProfessorModal('carina')">
+          <img src="./Dojo Kokoro - Aikido_files/instrutores-03.png" alt="Carina" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+          <h2 class="text-2xl font-bold mb-2">Carina</h2>
+          <div class="text-yellow-600 font-semibold mb-2">2º Kyu</div>
+          <p class="text-gray-600 text-sm mb-2">Instrutora Kids. Didática lúdica e foco no desenvolvimento das crianças.</p>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="index.html" class="inline-block px-8 py-4 bg-yellow-400 text-black font-bold text-lg rounded-full hover:bg-yellow-500 transition-all duration-300 shadow-lg">Voltar para o início</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="gradient-bg text-white section-padding">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <img src="./Dojo Kokoro - Aikido_files/logo-kokoro-lateral-branco.png" 
+               alt="Dojo Kokoro" 
+               class="h-12 mb-4">
+          <p class="text-gray-300 leading-relaxed">
+            31 anos transformando vidas através do Aikido. Tradição, disciplina e crescimento pessoal.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-4">Contato Rápido</h4>
+          <div class="space-y-2 text-gray-300">
+            <p>📱 (15) 99670-6625</p>
+            <p>✉️ pelegriniaikido@gmail.com</p>
+            <p>📍 Sorocaba e Indaiatuba</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-4">Como Chegar</h4>
+          <div class="space-y-3">
+            <div>
+              <p class="text-gray-300 font-medium mb-2">🏛️ Sorocaba - Sede</p>
+              <p class="text-gray-400 text-sm mb-2">Rua Esmeraldo Tarquínio, 53 - Campolim</p>
+              <button onclick="openMap('sorocaba')" 
+                      class="text-yellow-400 hover:text-yellow-300 text-sm font-medium transition-colors">
+                📍 Ver no Mapa
+              </button>
+            </div>
+            <div>
+              <p class="text-gray-300 font-medium mb-2">🏛️ Indaiatuba</p>
+              <p class="text-gray-400 text-sm mb-2">Rua Amazonas, 262 - Centro</p>
+              <button onclick="openMap('indaiatuba')" 
+                      class="text-yellow-400 hover:text-yellow-300 text-sm font-medium transition-colors">
+                📍 Ver no Mapa
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-4">Siga-nos</h4>
+          <div class="flex space-x-4">
+            <a href="https://www.instagram.com/aikidokokoro" 
+               target="_blank" 
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition-all group">
+              <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/kokorodojosorocaba?locale=pt_BR" 
+               target="_blank" 
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition-all group">
+              <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/5515996706625" 
+               target="_blank" 
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition-all group">
+              <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-white/20 pt-8 text-center text-gray-300">
+        <p>&copy; 2025 Dojo Kokoro. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Map Modal -->
+  <div id="mapModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+      <div class="flex justify-between items-center p-4 border-b">
+        <h3 id="mapTitle" class="text-xl font-bold text-gray-900"></h3>
+        <button onclick="closeMap()" class="text-gray-500 hover:text-gray-700 text-2xl font-bold">
+          &times;
+        </button>
+      </div>
+      <div class="p-4">
+        <iframe id="mapFrame" 
+                width="100%" 
+                height="400" 
+                frameborder="0" 
+                style="border:0" 
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Float Button -->
+  <div class="fixed bottom-6 right-6 z-50 group">
+    <a href="https://wa.me/5515996706625?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20aula%20experimental" 
+       target="_blank" 
+       class="flex items-center justify-center w-16 h-16 bg-green-500 text-white font-semibold rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-105 relative">
+      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+      </svg>
+      
+      <!-- Tooltip -->
+      <div class="absolute right-full mr-3 px-3 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 whitespace-nowrap">
+        Fale Conosco
+        <!-- Arrow -->
+        <div class="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-gray-900 border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Modal Professor -->
+  <div id="professorModal" class="fixed inset-0 bg-black bg-opacity-60 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+      <button onclick="closeProfessorModal()" class="absolute top-3 right-4 text-gray-500 hover:text-gray-700 text-2xl font-bold">&times;</button>
+      <div class="p-6 text-center">
+        <img id="modalPhoto" src="" alt="" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+        <h2 id="modalName" class="text-2xl font-bold mb-2"></h2>
+        <div id="modalGraduacao" class="text-yellow-600 font-semibold mb-2"></div>
+        <div id="modalBio" class="text-gray-700 text-base leading-relaxed"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const professores = {
+      eduardo: {
+        nome: 'Sensei Eduardo Pelegrini',
+        graduacao: '5º Dan',
+        foto: './Dojo Kokoro - Aikido_files/sensei-eduardo.png',
+        bio: `<p>É o Sensei à frente da Escola de Aikido Dojo Kokoro em Sorocaba, trazendo consigo uma vasta experiência de mais de três décadas nas artes marciais. Praticante de Aikido desde 1995, ele alcançou o respeitável grau de 5º Dan, com uma certificação diretamente ligada ao Japão, fruto de seus ensinamentos com mestres notáveis como Sensei Costa (6º Dan) e Shihan Wagner Bull (7º Dan).
+Com formação em Educação Física e faixa marrom em Karate Shotokan, a expertise de Pelegrini vai além do dojo. Ele foi instrutor responsável de Aikido na Universidade de São Paulo (USP) entre 2010 e 2013, onde ministrou aulas para a Reitoria e agentes de segurança. Sua contribuição se estendeu também à Polícia Militar de Sorocaba, no PAPM, de 2008 a 2015, evidenciando sua capacidade de aplicar o Aikido em contextos de segurança. Complementando seu perfil, Eduardo Pelegrini possui certificação no Método DEFENSE, um inovador sistema que combina princípios do Aikido com técnicas policiais e militares, criado pelo Shihan Roberto Maruyama (7º Dan de Aikido), policial do GOE.</p>`
+      },
+      rocha: {
+        nome: 'Alexandre Rocha',
+        graduacao: '1º Dan',
+        foto: './Dojo Kokoro - Aikido_files/instrutores-01.png',
+        bio: `<p>Instrutor de adultos, conhecido pela didática acolhedora e pelo incentivo ao crescimento técnico dos alunos. Atua no Dojo Kokoro há mais de 10 anos, sempre buscando atualização e aprimoramento.</p>
+        <p class='mt-2'>Participa ativamente de eventos e seminários, trazendo novidades e motivação para a equipe.</p>`
+      },
+      mauricio: {
+        nome: 'Maurício Camargo',
+        graduacao: '3º Dan',
+        foto: './Dojo Kokoro - Aikido_files/instrutores-02.png',
+        bio: `<p>Com 31 anos dedicados ao Aikido, Maurício Luiz de Camargo, 68 anos, ostenta a graduação de Sandan. Sua jornada começou em 1995 no Kokoro Dojo, tendo como mestre o Sensei Constantino Delis (6º Dan). Hoje, ele continua a aprimorar sua arte ao lado de seu filho, o Sensei Eduardo Pelegrini (5º Dan). Além dos tatames, Maurício compartilha seu conhecimento dando aulas de inglês online. Ele ministra as aulas matinais de Aikido às terças e quintas-feiras, e nos domingos, dedica-se ao ensino de armas para praticantes de faixas marrons e pretas.</p>`
+      },
+      carina: {
+        nome: 'Carina',
+        graduacao: '2º Kyu',
+        foto: './Dojo Kokoro - Aikido_files/instrutores-03.png',
+        bio: `<p>Praticante de Aikido desde 2007, com trajetória iniciada no Instituto Takemussu sob orientação de Wagner Bull Shihan. Ao longo dos anos, tive a oportunidade de treinar também na Academia Central de Aikido com Lelba Kawai Sensei e Matias Sensei e  atualmente, sou aluna do Aikido Kokoro, em Indaiatuba. 
+
+Além do Aikido, cultivo uma jornada dedicada ao equilíbrio físico e mental. Pratico Tai Chi Chuan da Família Wang há 6 anos e Hatha Yoga há mais de 20. Minha formação marcial inclui ainda 6 anos de Kung Fu Louva-a-Deus 7 Estrelas no Templo Shaolin de Kung Fu.
+
+Na vida profissional, atuo há mais de duas décadas nas áreas de Governança de TI, além de ter atuado como professora durante 12 anos nos ensinos fundamental e médio, como professora licenciada de português e inglês.  
+
+Sou apaixonada por conhecimento, leitura, música e dança. Atualmente, também sou bailarina no curso intermediário de balé clássico, método cubano ,  mantendo viva a conexão entre corpo, mente e espírito que sempre guiou minha trajetória.</p>`
+      },
+      francisco: {
+        nome: 'Francisco Hernando',
+        graduacao: '1º Dan',
+        foto: './Dojo Kokoro - Aikido_files/sensei-eduardo.png',
+        bio: `<p>Praticante de Aikido desde 2011 e atualmente possui graduação Shodan (1º Dan). É bacharel em Ciências da Computação, com pós-graduação em Desenvolvimento Web. Iniciou sua jornada no Aikido em São Paulo, sob a orientação do Sensei Jakson Costa, 6º Dan. Em 2016, passou a residir em Sorocaba, onde treinou com o Sensei Constantino Delis, 6º Dan. Atualmente, é aluno do Sensei Eduardo Pelegrini, 5º Dan, no Dojo Kokoro Sorocaba.</p>`
+      },
+      augusto: {
+        nome: 'Augusto',
+        graduacao: '1º Dan',
+        foto: './Dojo Kokoro - Aikido_files/instrutores-01.png',
+        bio: `<p>Instrutor Kids em Indaiatuba, Augusto é focado no desenvolvimento infantil e na disciplina. Tem grande empatia com as crianças e busca sempre motivar o aprendizado através de jogos e desafios.</p>
+        <p class='mt-2'>Participa de projetos sociais e acredita no poder transformador do Aikido para jovens.</p>`
+      },
+      walter: {
+        nome: 'Sensei Walter',
+        graduacao: '2º Dan',
+        foto: './Dojo Kokoro - Aikido_files/instrutores-02.png',
+        bio: `<p>Responsável pelas aulas de adultos em Indaiatuba, Sensei Walter tem longa trajetória no Aikido. É reconhecido pela dedicação, disciplina e pelo incentivo ao desenvolvimento técnico dos alunos.</p>
+        <p class='mt-2'>Participa de seminários e mantém contato com mestres de todo o Brasil.</p>`
+      }
+    };
+
+    function showProfessorModal(key) {
+      const prof = professores[key];
+      if (!prof) return;
+      document.getElementById('modalPhoto').src = prof.foto;
+      document.getElementById('modalPhoto').alt = prof.nome;
+      document.getElementById('modalName').textContent = prof.nome;
+      document.getElementById('modalGraduacao').textContent = prof.graduacao;
+      document.getElementById('modalBio').innerHTML = prof.bio;
+      document.getElementById('professorModal').classList.remove('hidden');
+    }
+    function closeProfessorModal() {
+      document.getElementById('professorModal').classList.add('hidden');
+    }
+    // Fecha modal ao clicar fora
+    document.addEventListener('click', function(e) {
+      const modal = document.getElementById('professorModal');
+      if (!modal.classList.contains('hidden') && e.target === modal) {
+        closeProfessorModal();
+      }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const navHeight = document.querySelector('nav').offsetHeight;
+          const targetPosition = target.offsetTop - (navHeight / 4);
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+          
+          // Close mobile menu if open
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+
+    // Add animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-up');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Navigation background change on scroll
+    const nav = document.querySelector('nav');
+    
+    function updateNavBackground() {
+      // Check if mobile (screen width <= 768px)
+      const isMobile = window.innerWidth <= 768;
+      
+      if (isMobile) {
+        // Always solid white background on mobile
+        nav.classList.add('bg-white', 'border-b', 'border-gray-200');
+        nav.classList.remove('bg-white/95');
+      } else {
+        // Desktop behavior - change based on scroll
+        if (window.scrollY > 100) {
+          nav.classList.add('bg-white', 'border-b', 'border-gray-200');
+          nav.classList.remove('bg-white/95');
+        } else {
+          nav.classList.remove('bg-white', 'border-b', 'border-gray-200');
+          nav.classList.add('bg-white/95');
+        }
+      }
+    }
+
+    // Add event listeners
+    window.addEventListener('scroll', updateNavBackground);
+    window.addEventListener('resize', updateNavBackground);
+    
+    // Call once on page load to set initial state
+    updateNavBackground();
+
+    // === Ocultar menu na sessão hero (exceto mobile) ===
+    function handleHeroNavVisibility(entries) {
+      entries.forEach(entry => {
+        const isMobile = window.innerWidth <= 768;
+        if (!isMobile) {
+          if (entry.isIntersecting) {
+            navBar.classList.add('invisible');
+          } else {
+            navBar.classList.remove('invisible');
+          }
+        } else {
+          navBar.classList.remove('invisible');
+        }
+      });
+    }
+    const heroSection = document.getElementById('inicio');
+    const navBar = document.querySelector('nav');
+    const heroObserver = new IntersectionObserver(handleHeroNavVisibility, { threshold: 0.5 });
+    if (heroSection) {
+      heroObserver.observe(heroSection);
+    }
+    window.addEventListener('resize', () => {
+      // Garante que o menu volte ao normal ao redimensionar para mobile
+      if (window.innerWidth <= 768) {
+        navBar.classList.remove('invisible');
+      }
+    });
+
+    // Map Modal Functions
+    function openMap(location) {
+      let title = '';
+      let address = '';
+
+      if (location === 'sorocaba') {
+        title = 'Dojo Kokoro - Sorocaba';
+        address = 'Rua Esmeraldo Tarquínio, 53, Campolim, Sorocaba - SP';
+      } else if (location === 'indaiatuba') {
+        title = 'Dojo Kokoro - Indaiatuba';
+        address = 'Rua Amazonas, 262, Centro, Indaiatuba - SP';
+      }
+
+      if (address) {
+        document.getElementById('mapTitle').textContent = title;
+        const mapUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(address)}&zoom=16`;
+        document.getElementById('mapFrame').src = mapUrl;
+        document.getElementById('mapModal').classList.remove('hidden');
+      } else {
+        alert('Localização não disponível para este mapa.');
+      }
+    }
+
+    function closeMap() {
+      document.getElementById('mapModal').classList.add('hidden');
+      document.getElementById('mapFrame').src = ''; // Clear iframe source
+    }
+  </script>
+</body>
+</html> 
